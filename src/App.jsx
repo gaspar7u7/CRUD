@@ -21,7 +21,7 @@ function App() {
   };
 
   useEffect(() => {
-    apiUsers("https://users-crud1.herokuapp.com/users/");
+    apiUsers("https://users-crud.academlo.tech/users/");
   }, []);
 
   const apiUsers = (url, method = "get", data = null) => {
@@ -41,7 +41,7 @@ function App() {
             showConfirmButton: false,
             timer: 1500,
           });
-          apiUsers("https://users-crud1.herokuapp.com/users/");
+          apiUsers("https://users-crud.academlo.tech/users/");
         });
         break;
       }
@@ -56,7 +56,7 @@ function App() {
               showConfirmButton: false,
               timer: 1500,
             });
-            apiUsers("https://users-crud1.herokuapp.com/users/");
+            apiUsers("https://users-crud.academlo.tech/users/");
           })
           .catch((error) => console.log(error.response));
         break;
@@ -85,7 +85,7 @@ function App() {
               axios
                 .delete(url)
                 .then(() => {
-                  apiUsers("https://users-crud1.herokuapp.com/users/");
+                  apiUsers("https://users-crud.academlo.tech/users/");
                 })
                 .then(() => {
                   swalWithBootstrapButtons.fire(
@@ -97,7 +97,7 @@ function App() {
             } else if (result.dismiss === Swal.DismissReason.cancel) {
               clear();
 
-              apiUsers("https://users-crud1.herokuapp.com/users/");
+              apiUsers("https://users-crud.academlo.tech/users/");
               swalWithBootstrapButtons.fire(
                 "Cancelled",
                 "Your imaginary user is safe :)",
@@ -112,7 +112,7 @@ function App() {
   };
 
   const submit = (data) => {
-    apiUsers("https://users-crud1.herokuapp.com/users/", "post", data);
+    apiUsers("https://users-crud.academlo.tech/users/", "post", data);
     clear();
     setIsVisible(!isVisible);
   };
@@ -178,7 +178,7 @@ function App() {
           <button
             type="button"
             className="fresh"
-            onClick={() => apiUsers("https://users-crud1.herokuapp.com/users/")}
+            onClick={() => apiUsers("https://users-crud.academlo.tech/users/")}
           >
             <i className="fa-solid fa-arrows-rotate"></i>
           </button>

@@ -10,7 +10,7 @@ const Users = ({ user, apiUsers }) => {
   // aqui voy a actualizar un usuario
   const submit = (data) => {
     apiUsers(
-      `https://users-crud1.herokuapp.com/users/${user.id}/`,
+      `https://users-crud.academlo.tech/users/${user.id}/`,
       "put",
       data
     );
@@ -20,7 +20,7 @@ const Users = ({ user, apiUsers }) => {
   //aqui voy a eliminar un usuario
 
   const deleteUser = () =>
-    apiUsers(`https://users-crud1.herokuapp.com/users/${user.id}/`, "delete");
+    apiUsers(`https://users-crud.academlo.tech/users/${user.id}/`, "delete");
 
   return !isInput ? (
     <li
